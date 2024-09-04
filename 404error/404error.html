@@ -4,8 +4,6 @@
 <head>
   <meta charset="UTF-5">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- displays site properly based on user's device -->
-
   <title>404 Not Found</title>
 
   <style>
@@ -14,7 +12,6 @@
       src: url('fonts/SpaceMono-Regular.ttf') format('truetype');
     }
 
-    /* Estilos generales (se aplican a todas las pantallas) */
     body {
       margin: 0;
       padding: 0;
@@ -30,16 +27,58 @@
     }
 
     .image-container {
+      display: flex;
+      align-items: center;
       text-align: left;
       padding-top: 140px;
-      padding-left: 100px;
+      padding-left: 200px;
     }
 
     .attribution a {
       color: #333333;
     }
 
-    /* Media query para pantallas móviles (max-width: 375px) */
+    .texto {
+      margin-left: 10px;
+      font-weight: bold;
+      font-size: 50px;
+      max-width: 500px;
+    }
+
+    .texto1 {
+      margin-top: 20px;
+      font-size: 20px;
+      margin-left: 10px;
+      max-width: 320px;
+      color: #4f4f4f;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 150px;
+      padding: 50px;
+      font-size: 14px;
+    }
+
+    .content {
+      flex: 1;
+    }
+
+    .button-container {
+      margin-top: 60px;
+      margin-left: 10px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 25px 35px;
+      font-size: 16px;
+      color: #fff;
+      background-color: #333333;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
     @media (max-width: 375px) {
       .attribution {
         padding-left: 20px;
@@ -47,12 +86,38 @@
       }
 
       .image-container {
+        flex-direction: column;
         padding-left: 20px;
         padding-top: 50px;
       }
+
+      .texto {
+        margin-left: 0;
+        font-size: 27px;
+        max-width: 200px;
+      }
+
+      .texto1 {
+        margin-left: 0;
+        font-size: 16px;
+      }
+
+      .btn {
+        display: inline-block;
+        padding: 20px 25px;
+        font-size: 12px;
+        color: #fff;
+        background-color: #333333;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+      }
+
+      .button-container {
+        margin-left: 0;
+        margin-top: 30px;
+      }
     }
 
-    /* Media query para pantallas de escritorio (min-width: 1440px) */
     @media (min-width: 1440px) {
       .attribution {
         padding-left: 100px;
@@ -60,10 +125,9 @@
       }
 
       .image-container {
-        padding-left: 140px;
-        padding-top: 160px;
+        padding-left: 180px;
+        padding-top: 150px;
       }
-
     }
   </style>
 </head>
@@ -74,9 +138,23 @@
     404 NOT FOUND
   </div>
   <div class="image-container">
-    <img src="img/scarecrow.png" alt="scarecrow" width="480" height="430">
+    <img src="img/scarecrow.png" alt="scarecrow" width="550" height="480" style='margin-right: 250px'>
+    <div>
+      <div class="texto">
+        <p>I have bad news for you</p>
+      </div>
+      <div class="texto1">
+        <p>The page you are looking for might be removed or is temporarily unavailable</p>
+        <div class="button-container">
+          <a href="https://www.google.com" class="btn">BACK TO HOMEPAGE</a>
+        </div>
+      </div>
+    </div>
   </div>
 
+  <footer>
+    Created by <a href="https://github.com/AEperalesguevara" target="_blank">AEperalesguevara</a>
+  </footer>
 </body>
 
 </html>
