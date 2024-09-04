@@ -12,10 +12,21 @@
       src: url('fonts/SpaceMono-Regular.ttf') format('truetype');
     }
 
+    html,
     body {
+      height: 100%;
       margin: 0;
       padding: 0;
       font-family: 'Space Mono', sans-serif;
+    }
+
+    body {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .content {
+      flex: 1;
     }
 
     .attribution {
@@ -31,7 +42,7 @@
       align-items: center;
       text-align: left;
       padding-top: 140px;
-      padding-left: 200px;
+      padding-left: 250px;
     }
 
     .attribution a {
@@ -55,13 +66,10 @@
 
     footer {
       text-align: center;
-      margin-top: 150px;
-      padding: 50px;
+      margin: 0;
+      padding: 20px;
       font-size: 14px;
-    }
-
-    .content {
-      flex: 1;
+      background-color: #f1f1f1;
     }
 
     .button-container {
@@ -79,6 +87,7 @@
       transition: background-color 0.3s ease;
     }
 
+    /* Ajustes para pantallas móviles */
     @media (max-width: 375px) {
       .attribution {
         padding-left: 20px;
@@ -91,32 +100,41 @@
         padding-top: 50px;
       }
 
+      .image-container img {
+        width: 100%;
+
+        height: auto;
+        margin-right: 0;
+      }
+
       .texto {
-        margin-left: 0;
-        font-size: 27px;
-        max-width: 200px;
+        margin-left: 20;
+        text-align: left;
+        font-size: 30px;
       }
 
       .texto1 {
-        margin-left: 0;
+        margin-left: 20;
+        text-align: left;
         font-size: 16px;
+      }
+
+      .button-container {
+        margin-left: 0;
+        text-align: left;
       }
 
       .btn {
         display: inline-block;
-        padding: 20px 25px;
-        font-size: 12px;
+        padding: 15px 18px;
+        font-size: 13px;
         color: #fff;
         background-color: #333333;
         text-decoration: none;
         transition: background-color 0.3s ease;
       }
-
-      .button-container {
-        margin-left: 0;
-        margin-top: 30px;
-      }
     }
+
 
     @media (min-width: 1440px) {
       .attribution {
@@ -125,8 +143,23 @@
       }
 
       .image-container {
-        padding-left: 180px;
-        padding-top: 150px;
+        padding-left: 200px;
+        padding-top: 160px;
+      }
+
+      .texto {
+        margin-left: 200px;
+        font-weight: bold;
+        font-size: 50px;
+        max-width: 500px;
+      }
+
+      .texto1 {
+        margin-top: 20px;
+        font-size: 20px;
+        margin-left: 200px;
+        max-width: 320px;
+        color: #4f4f4f;
       }
     }
   </style>
@@ -134,19 +167,21 @@
 
 <body>
 
-  <div class="attribution">
-    404 NOT FOUND
-  </div>
-  <div class="image-container">
-    <img src="img/scarecrow.png" alt="scarecrow" width="550" height="480" style='margin-right: 250px'>
-    <div>
-      <div class="texto">
-        <p>I have bad news for you</p>
-      </div>
-      <div class="texto1">
-        <p>The page you are looking for might be removed or is temporarily unavailable</p>
-        <div class="button-container">
-          <a href="https://www.google.com" class="btn">BACK TO HOMEPAGE</a>
+  <div class="content">
+    <div class="attribution">
+      404 NOT FOUND
+    </div>
+    <div class="image-container">
+      <img src="img/scarecrow.png" alt="scarecrow" style="width: 100%; max-width: 550px; height: auto;">
+      <div>
+        <div class="texto">
+          <p>I have bad news for you</p>
+        </div>
+        <div class="texto1">
+          <p>The page you are looking for might be removed or is temporarily unavailable</p>
+          <div class="button-container">
+            <a href="https://www.google.com" class="btn">BACK TO HOMEPAGE</a>
+          </div>
         </div>
       </div>
     </div>
